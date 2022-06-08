@@ -1,1 +1,25 @@
-<p>lab3cw2 works!</p>
+<h3>Użycie ngModel</h3>
+<p>Imię ucznia to: {{ imie }}</p>
+<br>
+<p>Nazwisko ucznia to: {{ nazwisko }}</p>
+<br>
+<p>Wiek ucznia to: {{ wiek }}</p>
+<label for="student">imię: </label>
+<br>
+<label for="student">nazwisko: </label>
+<br>
+<input [(ngModel)]="imie"> {{ imie }}
+<br>
+<input [(ngModel)]="nazwisko"> {{ nazwisko }}
+<br>
+<input [(ngModel)]="wiek"> {{ wiek }}
+<br>
+
+
+ <button type="button" (click)="onEnter(imie, nazwisko, wiek)"> Wyświetl </button>
+
+     <ul>
+      <li>{{value}}</li>
+      <li>{{value1}}</li>
+      <li>{{value2}}</li>
+    </ul>
