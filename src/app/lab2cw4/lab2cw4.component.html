@@ -1,0 +1,30 @@
+<h3>Osoby które nie zdały egzaminu:</h3>
+<div *ngIf="osoby?.length > 0; then wypiszOsoby; else brakOsob"></div>
+
+<ng-template #wypiszOsoby>
+ <div *ngFor="let osoba of osoby">
+ <span>{{ osoba.imie }} </span>
+<span *ngIf="osoba?.nazwisko">{{ osoba.nazwisko }} </span> <span>ma {{ osoba.wiek }} lata.</span>
+ </div>
+</ng-template>
+
+
+<ng-template #brakOsob>
+ <div>Brak osób do wyświetlenia</div>
+</ng-template>
+
+<ng-template #dodanieOsob>
+  <div>Osoby zostały dodane</div>
+ </ng-template>
+
+ <ng-template #usuniecieOsob>
+  <div>Osoby zostały usunięte</div>
+ </ng-template>
+
+ <div *ngIf="osoby?.length > 0; then dodanieOsob; else usuniecieOsob"></div>
+
+
+<br>
+<button (click)="dodajOsoby()">Dodaj osoby</button>
+<button (click)="usunOsoby()">Usuń osoby</button>
+

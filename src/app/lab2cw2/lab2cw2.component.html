@@ -1,0 +1,21 @@
+<!-- <ul *ngFor="let osoba of tablica">
+  <li *ngIf="osoba.wiek <20 && osoba.czyStudent == true || osoba.wiek > 60 && osoba.czyStudent == false">
+  <span>{{ osoba.imie }} </span>
+  <span *ngIf="osoba.wiek >20 && osoba.wiek < 60">{{osoba.wiek}}</span>
+  <span *ngIf="osoba.wiek < 20 ">{{osoba.wiek}} - nastolatek</span>
+  <span *ngIf="osoba.wiek > 60 ">{{osoba.wiek}} - senior</span>
+  <span class = "czyStudent"> Czy student: {{ osoba.czyStudent ? 'Tak' : 'Nie' }} | </span>
+  <span>{{ osoba.nrAlbumu }} </span>
+
+
+  </li>
+ </ul> -->
+ <div *ngFor="let osoba of tablica; let i = index">
+    <div [ngSwitch]="osoba.imie">
+    <div *ngSwitchCase="'Oskar'"> {{i + 1}}) Oskar</div>
+    <div *ngSwitchCase="'Paweł'"> {{i + 1}}) Paweł</div>
+    <div *ngSwitchCase="'Jan'"> {{i + 1}}) Jan</div>
+    <div *ngSwitchCase="'Michał'"> {{i + 1}}) Michał</div>
+    <div *ngSwitchDefault>{{ i + 1 }}) {{ osoba.imie }}</div>
+    </div>
+</div>

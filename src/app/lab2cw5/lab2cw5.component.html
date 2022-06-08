@@ -1,0 +1,9 @@
+<h3 [className]="zmienKolor">Wprowadzenie do Angulara</h3>
+<img [src]="logo">
+<br>
+<input [value]="inputText"> {{ inputText }}
+<br><br>
+<button [disabled]="isDisabled">nieedytowalny</button>
+<button (click)="zmienUstawienia()">edytowalny</button>
+<p [innerHTML]="htmlContent"></p>
+<h3 [ngClass]="getClass()">To jest ostatnie zadanie na dziś</h3>

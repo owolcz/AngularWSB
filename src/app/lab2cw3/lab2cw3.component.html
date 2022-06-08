@@ -1,0 +1,7 @@
+<h3>{{ title }}</h3>
+<div *ngFor="let dzien of dniTygodnia; let i = index">
+ <div [ngSwitch]="dzien">
+ <div *ngSwitchCase="'poniedziałek'">{{ i + 1 }}) poniedziałek</div> <div *ngSwitchCase="'wtorek'">{{ i + 1 }}) wtorek</div> <div *ngSwitchCase="'środa'">{{ i + 1 }}) środa</div>
+ <div *ngSwitchCase="'czwartek'">{{ i + 1 }}) czwartek</div> <div *ngSwitchCase="'piątek'">{{ i + 1 }}) {{ dzien }}</div> <div *ngSwitchCase="'sobota'">{{ i + 1 }}) {{ dzien }}</div>
+ <div *ngSwitchDefault>{{ i + 1 }}) {{ dzien }}</div> </div>
+</div>
