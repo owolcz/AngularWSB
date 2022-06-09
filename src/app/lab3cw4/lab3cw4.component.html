@@ -1,1 +1,6 @@
-<p>lab3cw4 works!</p>
+<p *ngIf="isCreated" [ngStyle]="{color: 'red'}">Student już istnieje!</p>
+<app-studenci-view
+ [studenciItems]="studenci"
+ (addStudent)="onAddStudent($event)"
+ (usunStudent)="onUsunStudent($event)">
+</app-studenci-view>

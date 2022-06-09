@@ -19,11 +19,7 @@ export class AppComponent implements OnInit{
 
 
 
-  metoda1(imie: string, nazwisko: string, wiek?:number)
-  {
 
-
-  }
 }
 
 

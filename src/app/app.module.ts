@@ -16,6 +16,8 @@ import { Lab3cw3Component } from './lab3cw3/lab3cw3.component';
 import { StudenciViewComponent } from './studenci-view/studenci-view.component';
 import { SamochodyComponent } from './samochody/samochody.component';
 import { Lab3cw4Component } from './lab3cw4/lab3cw4.component';
+import { SamochodyViewComponent } from './samochody-view/samochody-view.component';
+import { Lab3cw4v2Component } from './lab3cw4v2/lab3cw4v2.component';
 
 
 @NgModule({
@@ -34,6 +36,8 @@ import { Lab3cw4Component } from './lab3cw4/lab3cw4.component';
     StudenciViewComponent,
     SamochodyComponent,
     Lab3cw4Component,
+    SamochodyViewComponent,
+    Lab3cw4v2Component,
 
   ],
   imports: [

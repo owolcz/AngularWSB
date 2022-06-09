@@ -1,0 +1,11 @@
+<p>Auta:</p>
+<ul>
+ <li *ngFor="let auto of autaItems; let i = index">
+ {{ i + 1 }}) {{ auto }}
+ <button (click)="usunAuto(i)">Usuń</button>
+ </li>
+</ul>
+<br>
+<label>Podaj auto: </label>
+<input [(ngModel)]="auto">
+<button (click)="dodajAuto()">Dodaj auto</button>

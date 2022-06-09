@@ -1,0 +1,6 @@
+<p *ngIf="isCreated" [ngStyle]="{color: 'red'}">Student już istnieje!</p>
+<app-samochody-view
+ [autaItems]="auta"
+ (addAuto)="onAddAuto($event)"
+ (deletAuto)="onUsunAuto($event)">
+</app-samochody-view>

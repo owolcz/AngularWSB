@@ -1,16 +1,26 @@
-import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
+
 @Component({
   selector: 'app-studenci-view',
   templateUrl: './studenci-view.component.html',
-  styleUrls: ['./studenci-view.component.scss']
+  styleUrls: ['./studenci-view.component.scss'],
 })
 export class StudenciViewComponent implements OnInit {
-
   @Input() studenciItems: string[] = [];
-  constructor() { }
+  @Output() usunStudent: EventEmitter<number> = new EventEmitter<number>();
+  @Output() addStudent: EventEmitter<string> = new EventEmitter<string>();
+  student: string;
 
-  ngOnInit(): void {
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  usunStudenta(index: number) {
+    this.usunStudent.emit(index);
   }
 
+  dodajStudenta() {
+    this.addStudent.emit(this.student);
+    this.student = '';
+  }
 }

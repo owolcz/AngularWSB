@@ -1,5 +1,18 @@
-<p>Studenci:</p>
+<!-- <p>Studenci:</p>
 <ul *ngIf="studenciItems">
  <li *ngFor="let student of studenciItems; let i = index"> {{ i + 1 }} {{ student }}
  </li>
+</ul> -->
+<!-- HTML DO ZADANIA LAB3CW2 ^ -->
+
+<p>Studenci:</p>
+<ul>
+ <li *ngFor="let student of studenciItems; let i = index">
+ {{ i + 1 }}) {{ student }}
+ <button (click)="usunStudenta(i)">Usuń</button>
+ </li>
 </ul>
+<br>
+<label>Podaj studenta: </label>
+<input [(ngModel)]="student">
+<button (click)="dodajStudenta()">Dodaj studenta</button>
