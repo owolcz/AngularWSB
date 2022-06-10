@@ -11,7 +11,8 @@ import { Osoba } from './lab2cw2/osoba';
 })
 export class AppComponent implements OnInit{
 
-
+  tekstWZmiennej = 'To jest tekst z pola z pliku .ts';
+  samochody = ['Audi', 'BMW', 'Mercedes'];
 
   ngOnInit(): void {
 

@@ -1,0 +1,91 @@
+<main>
+  <h4>Formularz TEMPLATE-DRIVEN</h4>
+  <form>
+    <p>
+      <label>Imię </label>
+      <input
+        placeholder="Wprowadź imię"
+        type="text"
+        [(ngModel)]="osoba.imie"
+        name="imie"
+      />
+    </p>
+    <p>
+      <label>Nazwisko </label>
+      <input
+        placeholder="Wprowadź nazwisko"
+        type="text"
+        [(ngModel)]="osoba.nazwisko"
+        name="nazwisko"
+      />
+    </p>
+    <p>
+      <label>E-mail  </label>
+      <input
+        placeholder="Wprowadź e-mail"
+        type="text"
+        [(ngModel)]="osoba.email"
+        name="e-mail"
+      />
+    </p>
+    <p>
+      <textarea
+        placeholder="Opis..."
+        style="width: 240px"
+        type="text-area"
+        [(ngModel)]="osoba.opis"
+        name="opis"
+      >
+      </textarea>
+    </p>
+    <p>
+      <label>Wiek </label>
+      <select
+        name="wiek"
+        title="Wiek osoby"
+        style="width: 177px"
+        [(ngModel)]="osoba.wiek"
+      >
+        <option *ngFor="let item of wiek" [ngValue]="item">{{ item }}</option>
+      </select>
+    </p>
+    <p>
+      <label>Dni tygodnia </label>
+      <select
+        name="dniTygodnia"
+        title="Dni tygodnia"
+        style="width: 177px"
+        [(ngModel)]="osoba.dniTygodnia"
+      >
+        <option *ngFor="let item of dniTygodnia" [ngValue]="item">{{ item }}</option>
+      </select>
+    </p>
+    <p class="checkbox">
+      <label>
+        <input
+          name="checkbox"
+          [(ngModel)]="osoba.czyStudent"
+          type="checkbox"
+          data-toggle="toggle"
+        />Czy Student
+      </label>
+    </p>
+    <p>
+      <input
+        type="radio"
+        value="male"
+        name="gender"
+        [(ngModel)]="osoba.gender"
+      />
+      Mężczyzna
+      <input
+        type="radio"
+        value="female"
+        name="gender"
+        [(ngModel)]="osoba.gender"
+      />
+      Kobieta
+    </p>
+    <button (click)="sendForm()">Wyślij formularz</button>
+  </form>
+</main>
